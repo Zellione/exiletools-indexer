@@ -602,6 +602,7 @@ $gearBaseType{"Harlequin Mask"} = "Helmet";
 $gearBaseType{"Vaal Mask"} = "Helmet";
 $gearBaseType{"Deicide Mask"} = "Helmet";
 $gearBaseType{"Golden Wreath"} = "Helmet";
+$gearBaseType{"Bone Helmet"} = "Helmet";
 $gearBaseType{"Splintered Tower Shield"} = "Shield";
 $gearBaseType{"Corroded Tower Shield"} = "Shield";
 $gearBaseType{"Rawhide Tower Shield"} = "Shield";
