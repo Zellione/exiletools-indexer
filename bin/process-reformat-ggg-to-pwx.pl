@@ -209,7 +209,6 @@ foreach my $message ( @$messages ) {
         } elsif ($data->{typeLine}) {
           $item{info}{typeLine} = $data->{typeLine};
           $item{info}{fullName} = $data->{typeLine};
-          $item{info}{name} = $data->{typeLine};
         } elsif ($data->{name}) {
           $item{info}{fullName} = $data->{name};
           $item{info}{name} = $data->{name};
@@ -724,10 +723,12 @@ foreach my $message ( @$messages ) {
           $item{enchantMods}{"$mod"} = \1;
         } 
       
-        &parseExtendedMods("implicitMods","implicit",$data->{implicitMods}) if ($data->{implicitMods});
-        &parseExtendedMods("explicitMods","explicit",$data->{explicitMods}) if ($data->{explicitMods});
-        &parseExtendedMods("craftedMods","crafted",$data->{craftedMods}) if ($data->{craftedMods});
-        &parseExtendedMods("cosmeticMods","cosmetic",$data->{cosmeticMods}) if ($data->{cosmeticMods});
+        if ($item{info}{name} !=~ / \(Essence of\)/i) {
+          &parseExtendedMods("implicitMods","implicit",$data->{implicitMods}) if ($data->{implicitMods});
+          &parseExtendedMods("explicitMods","explicit",$data->{explicitMods}) if ($data->{explicitMods});
+          &parseExtendedMods("craftedMods","crafted",$data->{craftedMods}) if ($data->{craftedMods});
+          &parseExtendedMods("cosmeticMods","cosmetic",$data->{cosmeticMods}) if ($data->{cosmeticMods});
+        }
       
         # Add a PseudoMod count for total resists
         if ($item{modsPseudo}) {
