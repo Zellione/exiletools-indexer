@@ -842,6 +842,11 @@ $gearBaseType{"Mortal Hope"} = "Vaal Fragment";
 $gearBaseType{"Mortal Ignorance"} = "Vaal Fragment";
 $gearBaseType{"Mortal Grief"} = "Vaal Fragment";
 $gearBaseType{"Offering to the Goddess"} = "Offering";
+$gearBaseType{"Esh's Breachstone"} = "Breach Stone";
+$gearBaseType{"Xoph's Breachstone"} = "Breach Stone";
+$gearBaseType{"Tul's Breachstone"} = "Breach Stone";
+$gearBaseType{"Uul-Netol's Breachstone"} = "Breach Stone";
+$gearBaseType{"Chayula's Breachstone"} = "Breach Stone";
 
 foreach $key (keys(%gearBaseType)) {
   push @gearBaseTypeArray, $key;
