@@ -209,6 +209,7 @@ foreach my $message ( @$messages ) {
         } elsif ($data->{typeLine}) {
           $item{info}{typeLine} = $data->{typeLine};
           $item{info}{fullName} = $data->{typeLine};
+          $item{info}{name} = $data->{typeLine};
         } elsif ($data->{name}) {
           $item{info}{fullName} = $data->{name};
           $item{info}{name} = $data->{name};
