@@ -33,6 +33,7 @@ though you will need to change the URL's in them to your local install of elasti
 * Notes on installing stuff on centos for my own machines:
 
 ** Perl
+sudo apt-get install libssl-dev
 cpanm TODDR/IO-1.36_01.tar.gz LWP::UserAgent JSON JSON::XS Encode utf8::all Date::Parse Time::HiRes Search::Elasticsearch Text::Unidecode Data::Dumper Storable File::Slurp Try::Tiny Scalar::Util Kafka String::Random Hijk
 
 ** Kafka
