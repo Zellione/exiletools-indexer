@@ -256,12 +256,14 @@ sub parseExtendedMods {
         $item{attributes}{"$modTypeJSON"."Count"}++;
       # Anything left over, just assume that it's a description that should be set to TRUE
       } else {
-        $item{mods}{$item{attributes}{itemType}}{$modType}{$modLine} = \1;
+        if ($modLine ne "") {
+          $item{mods}{$item{attributes}{itemType}}{$modType}{$modLine} = \1;
 # Skip booleans for modsTotal too
 #        unless (($modType eq "cosmetic") || ($item{attributes}{itemType} eq "Gem") || ($item{attributes}{itemType} eq "Map") || $item{attributes}{itemType} eq "Flask") {
 #          $item{modsTotal}{$modLine} = \1;
-#        }
-        $item{attributes}{"$modTypeJSON"."Count"}++;
+#         }
+          $item{attributes}{"$modTypeJSON"."Count"}++;
+        }
       }
     }
   }

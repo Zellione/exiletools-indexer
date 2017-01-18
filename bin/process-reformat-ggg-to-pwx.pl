@@ -723,12 +723,11 @@ foreach my $message ( @$messages ) {
           $item{enchantMods}{"$mod"} = \1;
         } 
       
-        if ($item{info}{name} !=~ / \(Essence of\)/i) {
-          &parseExtendedMods("implicitMods","implicit",$data->{implicitMods}) if ($data->{implicitMods});
-          &parseExtendedMods("explicitMods","explicit",$data->{explicitMods}) if ($data->{explicitMods});
-          &parseExtendedMods("craftedMods","crafted",$data->{craftedMods}) if ($data->{craftedMods});
-          &parseExtendedMods("cosmeticMods","cosmetic",$data->{cosmeticMods}) if ($data->{cosmeticMods});
-        }
+        &parseExtendedMods("implicitMods","implicit",$data->{implicitMods}) if ($data->{implicitMods});
+        &parseExtendedMods("explicitMods","explicit",$data->{explicitMods}) if ($data->{explicitMods});
+        &parseExtendedMods("craftedMods","crafted",$data->{craftedMods}) if ($data->{craftedMods});
+        &parseExtendedMods("cosmeticMods","cosmetic",$data->{cosmeticMods}) if ($data->{cosmeticMods});
+
       
         # Add a PseudoMod count for total resists
         if ($item{modsPseudo}) {
